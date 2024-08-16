@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: studio:latest
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/api/profile').then((r) => {if (r.status !== 200) throw new Error(r.status)})"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+    command: ["node", "server.js"]
+
+  # Additional services can be defined here if needed
