@@ -22,7 +22,7 @@
     "incremental": true,
     "paths": {
       "@ui/*": [
-        "./../../packages/ui/src/*"
+        "packages/ui/src/*"
       ]
       // handle ui package paths
     },

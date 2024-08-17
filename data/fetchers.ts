@@ -60,8 +60,6 @@ export const get: typeof _get = async (url, init) => {
 export const post: typeof _post = async (url, init) => {
   const headers = await constructHeaders(init?.headers)
 
-  console.log({headers, url, init})
-
   // on self-hosted, we don't have a /platform prefix
   if (!IS_PLATFORM && url.startsWith('/platform')) {
     // @ts-ignore

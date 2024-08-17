@@ -17,9 +17,6 @@ export async function getDatabasePublications(
   let headers = new Headers()
   if (connectionString) headers.set('x-connection-encrypted', connectionString)
 
-
-  console.log({headers, connectionString, projectRef}, "9730614299")
-
   const { data, error } = await get('/platform/pg-meta/{ref}/publications', {
     params: {
       header: {
