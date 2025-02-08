@@ -1,6 +1,6 @@
-const config = require('config/tailwind.config')
+//const config = require('config/tailwind.config')
 
-module.exports = config({
+module.exports = /*config(*/{
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -101,4 +101,4 @@ module.exports = config({
       },
     },
   },
-})
+}/*)*/
